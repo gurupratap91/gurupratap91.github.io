@@ -1,35 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>From a wanderer&#39;s perspective</title>
+    <description>I write here to share my perspective of things. 
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 May 2015 19:26:19 +0530</pubDate>
-    <lastBuildDate>Thu, 28 May 2015 19:26:19 +0530</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 29 May 2015 11:06:39 +0530</pubDate>
+    <lastBuildDate>Fri, 29 May 2015 11:06:39 +0530</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Test Driven Development in Ruby</title>
+        <description>&lt;html&gt;
+	&lt;title&gt;
+		&lt;head&gt; Test Driven Development in Ruby &lt;/head&gt;
+	&lt;/title&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;body&gt;
+&lt;p&gt;
+Test Driven Development (TDD) focuses on testing the logic rather than the previously existing code. Ruby has libraries(e.g. &lt;a href=&quot;http://rspec.info/&quot;&gt;Rspec&lt;/a&gt;) to support TDD and ‘rake’ to automate the process of running these tests on the code written. Organising the associated file in a prescribed manner makes this entire process very easy and understandable for a new person as well. Let’s see how the directory is organised.
+&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;
+There are four things that you need to keep under consideration : 
+&lt;ol&gt;
+	&lt;li&gt;/lib directory - This stores the implemented logic&lt;/li&gt;
+	&lt;li&gt;/test directory - This stores the tests written for the logic (/spec in case of Rspec library)&lt;/li&gt;
+	&lt;li&gt;Gemfile - Stores the dependencies involved for the code to run&lt;/li&gt;
+	&lt;li&gt;Rakefile - This stores the operation that you need to perform on the source code&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+The above directory structure allows you to setup any project, such that it follows TDD and remains machine independent. It breaks the code into desired modules and also applies the concept of single responsibility e.g. the /lib directory only deals with the logic. In the long term it makes refactoring easier. This is possible because the changes made just have to make sure that the previously written tests are passed.
+&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+A typical project can be set up in the following way:
+&lt;ol&gt;
+	&lt;li&gt;Create a project directory : &lt;i&gt;mkdir project&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Move to the project directory : &lt;i&gt;cd project&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Create /lib directory : &lt;i&gt;mkdir lib&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Create /spec directory(for Rspec library) : &lt;i&gt;mkdir spec&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Initialize bundler to create Gemfile : &lt;i&gt;bundle init&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Add the required gems to the Gemfile : e.g. add line &lt;b&gt;&lt;i&gt;gem &#39;rspec’&lt;/i&gt;&lt;/b&gt; to add the gem rspec&lt;/li&gt;
+	&lt;li&gt;Initialize the Rspec gem to create the helper files: &lt;i&gt;rspec –init&lt;/i&gt;&lt;/li&gt;
+	&lt;li&gt;Create the Rakefile to define the tasks needed to be performed on the code(check the example to see the content of a rakefile) : &lt;i&gt;vim Rakefile&lt;/i&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;
 
+&lt;p&gt;
+To go through an example project created using the above rules&lt;a href=&quot;https://github.com/gurupratap91/line.git&quot;&gt; click here&lt;/a&gt;.
+It contains a project which calculates the length of a line given the starting and the end points of the line.
+&lt;/p&gt;
+
+&lt;/body&gt;&lt;/html&gt;
 </description>
         <pubDate>Fri, 29 May 2015 00:54:06 +0530</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/05/29/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/05/29/welcome-to-jekyll.html</guid>
+        <link>/jekyll/update/2015/05/29/test-driven-development-in-ruby.html</link>
+        <guid isPermaLink="true">/jekyll/update/2015/05/29/test-driven-development-in-ruby.html</guid>
         
         
         <category>jekyll</category>
