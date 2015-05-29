@@ -12,7 +12,7 @@ categories: jekyll update
 
 <body>
 <p>
-Test Driven Development (TDD) focuses on testing the logic rather than the previously existing code. Ruby has libraries(e.g. <a href="http://rspec.info/">Rspec</a>) to support TDD and ‘rake’ to automate the process of running these tests on the code written. Organising the associated file in a prescribed manner makes this entire process very easy and understandable for a new person as well. Let’s see how the directory is organised.
+Test Driven Development (TDD) focuses on testing the logic rather than the previously existing code. Ruby has libraries(e.g. <a href="http://rspec.info/">Rspec</a>) to support TDD and ‘rake’ to automate the process of running these tests on the code written. Organising the project in a prescribed manner makes this entire process very easy and understandable for a new person as well. Let’s see how the directory is organised.
 </p>
 
 <p>
