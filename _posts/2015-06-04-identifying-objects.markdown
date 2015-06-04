@@ -19,7 +19,7 @@ The problem was further scaled where we had to form rectangles and then squares.
 </p>
 
 <p>
-As the problem was extended it made clear how important it is to have separate class for separate entities. We started with the <i>Line</i> class but later on the parameters that we were accepting as arrays and strings turned out to be separate classes. When we added the <i>Unit</i> class for the sides we had to make changes from the <i>Point</i> to the <i>Rectangle</i> and <i>Square</i> classes. This happened because of the dependency of these classes on each other. Frequent changes in the model makes refactoring a tedious task. This shows how important it is to think of a sustainable design while modelling the problem. Frequent changes in the model makes refactoring a tedious task.
+As the problem was extended it made clear how important it is to have separate class for separate entities. We started with the <i>Line</i> class but later on the parameters that we were accepting as arrays and strings turned out to be separate classes. When we added the <i>Unit</i> class for the sides we had to make changes from the <i>Point</i> to the <i>Rectangle</i> and <i>Square</i> classes. This happened because of the dependency of these classes on each other. Frequent changes in the model makes refactoring a tedious task. This shows how important it is to think of a sustainable design while modelling the problem. A good design ensures that the objects involved are identified before hand considering all possible use cases. This makes the process of adding methods and relating these objects quite easy.
 </p>
 </body>
 </html>
