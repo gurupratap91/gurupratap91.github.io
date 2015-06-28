@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Amazon Web Services EC2 and VPC"
+title:  "Amazon Web Services: EC2 and VPC"
 date:   2015-06-28 16:15:00
 categories: jekyll update
 ---
