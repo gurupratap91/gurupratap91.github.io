@@ -13,6 +13,8 @@ categories: jekyll update
 <body>
 <p>
 I had heard a lot about REST and RESTfullness of applications. It appeared to be a jargon for me for quite a while. It's actually not that difficult to understand. In this blog I have tried to focus on the conceptual idea of what REST is and not get into the standard definition. I have used the example of Rails to describe how it uses REST.
+</p>
+<p>
 REST stands for Representational State Transfer which is an architectural style for web applications. What REST focuses on is a web which has a rationale to support it in becoming scalable. It emphasizes on better user perceived performance, separation of concerns and provide generic interfaces for better communication between components. A RESTful application manages to do so by following the six constraints which were first communicated by Roy Fielding in his doctoral dissertation (see <a href ="http://www.ics.uci.edu/%7Efielding/pubs/dissertation/rest_arch_style.htm"> http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)</a>.
 </p>
 <p>
